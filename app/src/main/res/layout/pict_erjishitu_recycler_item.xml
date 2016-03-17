@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/sec_pic_activity_txt"
+        android:text="内容的描述"
+        android:padding="10dp"
+        android:maxLines="6"
+        android:layout_alignParentBottom="true"
+        android:textColor="@android:color/white"
+        android:background="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="150dp" />
+
+    <ImageView
+        android:id="@+id/sec_pic_activity_image"
+        android:layout_above="@id/sec_pic_activity_txt"
+        android:src="@drawable/ic_launcher"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

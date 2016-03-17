@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="310dp"
+    android:background="@drawable/bg_border_picture_ac">
+
+    <TextView
+        android:id="@+id/video_title"
+        android:text="奥巴马：美国是世界最强国家"
+        android:layout_marginLeft="5dp"
+        android:textSize="18sp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:textColor="@android:color/black"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:id="@+id/video_frame"
+        android:layout_below="@id/video_title"
+        android:layout_width="match_parent"
+        android:layout_height="230dp">
+
+        <include layout="@layout/surfaceview_video" />
+
+
+        <ImageView
+            android:id="@+id/video_image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gpq"
+            android:layout_width="match_parent"
+            android:layout_height="230dp" />
+
+        <ImageView
+            android:id="@+id/video_img_play"
+            android:src="@drawable/lpe"
+            android:layout_width="60dp"
+            android:layout_gravity="center"
+            android:layout_height="60dp" />
+
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/video_description"
+        android:text="奥巴马最后国情咨文"
+        android:layout_marginLeft="5dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/video_frame"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/video_time"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:layout_below="@id/video_description"
+        android:layout_alignParentBottom="true"
+        android:textSize="14sp"
+        android:layout_marginRight="5dp"
+        android:text="时间"
+        android:layout_marginBottom="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/video_danwei"
+        android:text=": 秒"
+        android:textSize="14sp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toLeftOf="@id/video_time"
+        android:gravity="center_vertical"
+        android:layout_below="@id/video_description"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/video_length"
+        android:text="多少"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        android:layout_marginBottom="5dp"
+        android:textColor="@android:color/holo_blue_bright"
+        android:layout_marginRight="1dp"
+        android:layout_toLeftOf="@id/video_danwei"
+        android:gravity="center_vertical"
+        android:layout_below="@id/video_description"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

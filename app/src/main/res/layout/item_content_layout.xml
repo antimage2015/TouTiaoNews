@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:paddingBottom="1dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="6dp"
+    android:paddingTop="5dp" >
+
+    <ImageView
+        android:id="@+id/list_image"
+        android:src="@drawable/gpq"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <TextView
+        android:id="@+id/list_title"
+        android:text="居名医保个人缴费比例或上升"
+        android:textSize="15sp"
+        android:singleLine="true"
+        android:paddingLeft="5dp"
+        android:paddingTop="2dp"
+        android:textStyle="italic"
+        android:layout_toRightOf="@id/list_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/list_content"
+        android:text="医保基金支出压力加大，巨额财政补贴风险正逐步显现,估计又是一群在坑人民的人在指定所谓国策，比知道何时才能有正在公正的政府"
+        android:textSize="12sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_toRightOf="@id/list_image"
+        android:paddingLeft="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/list_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/list_read_counts"
+        android:text="3万"
+        android:drawableRight="@drawable/ltr"
+        android:textSize="12sp"
+        android:paddingBottom="4dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/list_res_come"
+        android:text="资源的来源"
+        android:paddingLeft="5dp"
+        android:textSize="12sp"
+        android:paddingBottom="4dp"
+        android:layout_toRightOf="@id/list_image"
+        android:layout_toLeftOf="@id/list_read_counts"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

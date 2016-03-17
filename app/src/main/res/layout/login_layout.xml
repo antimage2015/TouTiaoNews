@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/login_back_image"
+        android:src="@drawable/btn_back"
+        android:scaleType="fitCenter"
+        android:background="@android:color/holo_red_dark"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:id="@+id/login_title"
+        android:text="登陆网易通行证"
+        android:textSize="26sp"
+        android:padding="10dp"
+        android:layout_toRightOf="@id/login_back_image"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_red_dark"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <ImageView
+        android:id="@+id/login_account_image"
+        android:layout_marginTop="55dp"
+        android:layout_below="@id/login_title"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/biz_account_head_selector_bg"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+    <EditText
+        android:id="@+id/login_account"
+        android:text="请输入账号"
+        android:layout_toRightOf="@id/login_account_image"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/login_title"
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <ImageView
+        android:id="@+id/login_password_image"
+        android:src="@drawable/fco"
+        android:scaleType="centerCrop"
+        android:layout_below="@id/login_account"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+    <TextView
+        android:id="@+id/login_password_forget"
+        android:text="忘记密码 ?"
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/login_account"
+        android:layout_marginRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/login_password"
+        android:text="请输入密码"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/login_account"
+        android:layout_toRightOf="@id/login_password_image"
+        android:layout_toLeftOf="@id/login_password_forget"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:text="登陆"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/holo_red_dark"
+        android:layout_below="@id/login_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

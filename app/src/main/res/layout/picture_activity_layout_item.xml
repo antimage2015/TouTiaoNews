@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="260dp"
+    android:background="@drawable/bg_border_picture_ac">
+
+    <ImageView
+        android:id="@+id/picture_activity_image"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/gpq" />
+
+    <TextView
+        android:id="@+id/picture_activity_content"
+        android:text="“我控诉”：1894法国叛国冤案"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/picture_activity_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/picture_activity_pics"
+        android:text="10pics"
+        android:drawableLeft="@drawable/lwm"
+        android:textColor="@android:color/black"
+        android:layout_above="@id/picture_activity_content"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/picture_activity_gentie"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/picture_activity_image"
+        android:gravity="center_vertical"
+        android:layout_alignParentRight="true"
+        android:text="跟帖"
+        android:textSize="14sp"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/picture_activity_num"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/picture_activity_image"
+        android:gravity="center_vertical"
+        android:layout_toLeftOf="@id/picture_activity_gentie"
+        android:text="380"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

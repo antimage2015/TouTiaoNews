@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mdw"
+    android:orientation="vertical"
+    tools:context=".newsfragments.LeftFragment" >
+
+    <TextView
+        android:id="@+id/textView_fragment_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:text="新闻的内容形式:"
+        android:textColor="#4cd964"
+        android:textSize="26sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#4cd964" />
+
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/media_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_border_two"
+            android:stateListAnimator="@animator/button_click"
+            android:text="视频"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/picture_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_border_two"
+            android:stateListAnimator="@animator/button_click"
+            android:text="图片"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_border_two"
+            android:stateListAnimator="@animator/button_click"
+            android:text="登陆"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/sign_in"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_border_two"
+            android:stateListAnimator="@animator/button_click"
+            android:text="注册"
+            android:textSize="14sp" />
+
+        <com.crazy.toutiaonews.newsfragments.ShineButtonView
+            android:id="@+id/lef_click"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_border_two"
+            android:stateListAnimator="@animator/button_click"
+            android:text="打开"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

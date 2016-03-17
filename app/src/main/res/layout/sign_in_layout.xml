@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/sign_back_image"
+        android:src="@drawable/btn_back"
+        android:scaleType="fitCenter"
+        android:background="@android:color/holo_red_dark"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:id="@+id/sign_in_title"
+        android:text="注册网易通行证"
+        android:textSize="26sp"
+        android:padding="10dp"
+        android:layout_toRightOf="@id/sign_back_image"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_red_dark"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:id="@+id/sign_in_welcome"
+        android:layout_marginTop="50dp"
+        android:text="欢迎注册网易通行证"
+        android:layout_below="@id/sign_in_title"
+        android:textSize="20sp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <RelativeLayout
+        android:id="@+id/sign_in_phone"
+        android:layout_below="@id/sign_in_welcome"
+        android:background="@drawable/sign_in_draw"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="20dp"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/sign_in_phone_image"
+            android:src="@drawable/biz_offline_icon_success"
+            android:layout_marginTop="4dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:id="@+id/sign_in_phone_title"
+            android:text="手机号注册"
+            android:textSize="16sp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/sign_in_phone_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/sign_in_phone_content"
+            android:text="免费验证短信，快速注册"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/sign_in_phone_image"
+            android:layout_below="@id/sign_in_phone_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/sign_in_email"
+        android:layout_below="@id/sign_in_phone"
+        android:background="@drawable/sign_in_draw"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="20dp"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/sign_in_email_image"
+            android:src="@drawable/biz_offline_icon_success"
+            android:layout_marginTop="4dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:id="@+id/sign_in_email_title"
+            android:text="邮箱注册"
+            android:textSize="16sp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/sign_in_email_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/sign_in_email_content"
+            android:text="使用您的常用邮箱注册"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/sign_in_email_image"
+            android:layout_below="@id/sign_in_email_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/sign_in_warm"
+        android:src="@drawable/fih"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="25dp"
+        android:layout_below="@id/sign_in_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/sign_warm_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginLeft="5dp"
+        android:minLines="2"
+        android:text="如果您已经注册“网易邮箱”或其他网易产品请直接登陆"
+        android:layout_toRightOf="@id/sign_in_warm"
+        android:layout_below="@id/sign_in_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

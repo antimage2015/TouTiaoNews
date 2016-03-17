@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--定义的颜色-->
+    <color name="accentGreen" >#d0f8ce</color>
+    <color name="darkGreen" >#0a7e07</color>
+    <color name="primaryGreen">#ffffff</color>
+    <!-- 默认字体颜色 -->
+    <color name="tabTextDefault" >#808080</color>
+    <color name="tabTextSelected" >#ff0000</color>
+</resources>
