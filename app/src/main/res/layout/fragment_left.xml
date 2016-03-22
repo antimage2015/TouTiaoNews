@@ -14,14 +14,14 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="5dp"
         android:layout_marginTop="5dp"
-        android:text="新闻的内容形式:"
-        android:textColor="#4cd964"
+        android:text="新闻内容形式:"
+        android:textColor="@android:color/holo_blue_dark"
         android:textSize="26sp" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#4cd964" />
+        android:background="@android:color/holo_blue_dark" />
 
 
     <RelativeLayout
@@ -71,13 +71,13 @@
 
         <com.crazy.toutiaonews.newsfragments.ShineButtonView
             android:id="@+id/lef_click"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_centerInParent="true"
             android:background="@drawable/bg_border_two"
             android:stateListAnimator="@animator/button_click"
-            android:text="打开"
-            android:textSize="18sp" />
+            android:text="点击打开"
+            android:textSize="14sp" />
 
     </RelativeLayout>
 

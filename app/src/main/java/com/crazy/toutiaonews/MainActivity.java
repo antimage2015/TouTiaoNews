@@ -5,7 +5,9 @@ import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.animation.BounceInterpolator;
+import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -16,14 +18,12 @@ import com.warmtel.slidingmenu.lib.app.SlidingActivity;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
 // 以前继承 SlidingActivity
 public class MainActivity extends SlidingActivity
         implements LeftFragment.Callbacks {
 
-    private boolean mFlag = true;
+//    private boolean mFlag = true;
     private List<Button> buttonList = new ArrayList<>();
 
     @Override
@@ -67,17 +67,26 @@ public class MainActivity extends SlidingActivity
             buttonList.add(buttons[i]);
         }
 
-        if (mFlag) {
-            buttons[0].setText("关闭");
-            startAnim();
-            timerClose();
-        } else {
-            buttons[0].setText("打开");
-            closeAnim();
-        }
+//        if (mFlag) {
+//            buttons[0].setText("关闭");
+//            startAnim();
+//            timerClose();
+//        }
+//        else {
+//            buttons[0].setText("打开");
+//            closeAnim();
+//        }
+        buttons[0].setText("正在关闭");
+        startAnim();
+        setRotateView();
+        timerClose();
     }
 
+    /**
+     *  定时关闭动画
+     */
     private void timerClose(){
+
         new AsyncTask<Void, Void, Void>() {
             @Override
             protected Void doInBackground(Void... params) {
@@ -92,10 +101,12 @@ public class MainActivity extends SlidingActivity
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                buttonList.get(0).setText("打开");
+
+                buttonList.get(0).setText("点击打开");
                 closeAnim();
             }
         }.execute();
+
     }
 
     @Override
@@ -128,19 +139,19 @@ public class MainActivity extends SlidingActivity
         ObjectAnimator animator0 = ObjectAnimator.ofFloat(buttonList.get(0),
                 "alpha", 0.5F, 1F);
         ObjectAnimator animator1 = ObjectAnimator.ofFloat(buttonList.get(1),
-                "translationY", 120F, 0);
+                "translationY", 130F, 0);
         ObjectAnimator animator2 = ObjectAnimator.ofFloat(buttonList.get(2),
-                "translationX", 120F, 0);
+                "translationX", 130F, 0);
         ObjectAnimator animator3 = ObjectAnimator.ofFloat(buttonList.get(3),
-                "translationY", -120F, 0);
+                "translationY", -130F, 0);
         ObjectAnimator animator4 = ObjectAnimator.ofFloat(buttonList.get(4),
-                "translationX", -120F, 0);
+                "translationX", -130F, 0);
         AnimatorSet set = new AnimatorSet();
         set.setDuration(500);
         set.setInterpolator(new BounceInterpolator());
         set.playTogether(animator0, animator1, animator2, animator3, animator4);
         set.start();
-        mFlag = true;
+ //       mFlag = true;
     }
 
     /**
@@ -155,19 +166,19 @@ public class MainActivity extends SlidingActivity
         ObjectAnimator animator1 = ObjectAnimator.ofFloat(
                 buttonList.get(1),
                 "translationY",
-                120F);
+                130F);
         ObjectAnimator animator2 = ObjectAnimator.ofFloat(
                 buttonList.get(2),
                 "translationX",
-                120F);
+                130F);
         ObjectAnimator animator3 = ObjectAnimator.ofFloat(
                 buttonList.get(3),
                 "translationY",
-                -120F);
+                -130F);
         ObjectAnimator animator4 = ObjectAnimator.ofFloat(
                 buttonList.get(4),
                 "translationX",
-                -120F);
+                -130F);
         AnimatorSet set = new AnimatorSet();
         set.setDuration(500);
         set.setInterpolator(new BounceInterpolator());
@@ -178,10 +189,55 @@ public class MainActivity extends SlidingActivity
                 animator3,
                 animator4);
         set.start();
-        mFlag = false;
+ //       mFlag = false;
     }
 
+    /**
+     *  旋转动画
+     */
+    private void setRotateView(){
 
+        int a = buttonList.get(1).getTop();
+        int b = buttonList.get(0).getHeight()/2;
+        int c = buttonList.get(0).getTop();
+        int wd = buttonList.get(0).getWidth()/2;
+        Log.e("tag", "a = "+ a + ", b = " + b + " , c = " + c);
+
+        int w = a - c;
+        int h = w+ b;
+
+        RotateAnimation rotate1 = new RotateAnimation(
+                0,
+                360,
+                RotateAnimation.ABSOLUTE, wd - w,
+                RotateAnimation.ABSOLUTE, -buttonList.get(1).getHeight()/2 + h);
+        rotate1.setDuration(1000);
+        buttonList.get(1).startAnimation(rotate1);
+
+        RotateAnimation rotate2 = new RotateAnimation(
+                0,
+                360,
+                RotateAnimation.ABSOLUTE, wd - w,
+                RotateAnimation.ABSOLUTE, -buttonList.get(2).getHeight()/2 + h);
+        rotate2.setDuration(1000);
+        buttonList.get(2).startAnimation(rotate2);
+
+        RotateAnimation rotate3 = new RotateAnimation(
+                0,
+                360,
+                RotateAnimation.ABSOLUTE, wd - w,
+                RotateAnimation.ABSOLUTE, -buttonList.get(3).getHeight()/2 + h);
+        rotate3.setDuration(1000);
+        buttonList.get(3).startAnimation(rotate3);
+
+        RotateAnimation rotate4 = new RotateAnimation(
+                0,
+                360,
+                RotateAnimation.ABSOLUTE, wd - w,
+                RotateAnimation.ABSOLUTE, -buttonList.get(4).getHeight()/2 + h);
+        rotate4.setDuration(1000);
+        buttonList.get(4).startAnimation(rotate4);
+    }
 
     /**
      * 返回键两次点击，第一次点击的时间
